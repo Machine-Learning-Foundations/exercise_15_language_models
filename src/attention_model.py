@@ -26,16 +26,10 @@ def dot_product_attention(
     Returns:
         torch.Tensor: The attention values of shape  [batch, heads, out_length, d_v]
     """
-    t, dk = q.shape[-2:]
-    device = q.device
-
-    scaled = q @ k.transpose(-2, -1) / torch.sqrt(torch.tensor(dk))
-    if is_causal:
-        scaled = scaled + (-1) * torch.exp(
-            (torch.tril(torch.ones(t, t).to(device)) - 0.5) * -2.0 * torch.inf
-        )
-    soft_scaled = f.softmax(scaled, dim=-1)
-    attention_out = soft_scaled @ v
+    # TODO implement multi head attention.
+    # Use i.e. torch.transpose, torch.sqrt, torch.tril, torch.exp, torch.inf
+    # as well as torch.nn.functional.softmax .
+    attention_out = None
     return attention_out
 
 
