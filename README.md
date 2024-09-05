@@ -20,3 +20,4 @@ Furthermore write a function to convert the network output of vector encodings b
 Attention is All you Need. NIPS 2017: 5998-6008
 
 Once you have implemented and tested your version of attention run `sbatch scripts/train.slurm` to train your model on Bender. Once converged you can generate poetry via `sbatch scripts/generate.slurm`.
+Run `src/model_chat.py` to talk to your model.
