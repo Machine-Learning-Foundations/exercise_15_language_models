@@ -1,7 +1,7 @@
 # Language Modelling Exercise
 
 This exercsie will allow you to explore language modelling. We focus on the key concept of multi-head attention.
-Navigate to the `src/attention_model.py`-file and implement multi-head attention
+Navigate to the `src/attention_model.py`-file and implement multi-head attention [1]
 
 ``` math
 \text{Attention}(\mathbf{Q},\mathbf{K},\mathbf{V}) = \text{softmax}(\frac{\mathbf{Q}\mathbf{K}^T}{\sqrt{d_k}})\mathbf{V}
