@@ -56,6 +56,12 @@ def train(args):
             device = torch.device("cpu")
     else:
         device = torch.device("cpu")
+    
+    down_lr = 50
+    if "mahabharata" in args.data_dir:
+        args.batch_size = 128
+        args.num_epochs = 50
+        down_lr = 30
 
     data_loader = TextLoader(args.data_dir, args.batch_size, args.seq_length)
 
@@ -118,7 +124,7 @@ def train(args):
                 f"Epoch: {e}. Truth: " + "".join(seq_gt[0]).replace("\n", "\\n ")
             )
 
-        if e == 50:
+        if e == down_lr:
             tqdm.write("reducing learning rate.")
             for g in optimizer.param_groups:
                 g["lr"] = g["lr"] / 2.0
