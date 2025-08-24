@@ -22,13 +22,16 @@ def dot_product_attention(
         q (torch.Tensor): The query tensor of shape [batch, heads, out_length, d_k].
         k (torch.Tensor): The key tensor of shape [batch, heads, out_length, d_k].
         v (torch.Tensor): The value-tensor of shape [batch, heads, out_length, d_v].
+        is_causal (bool): Whether to apply a causal mask.
 
     Returns:
         torch.Tensor: The attention values of shape  [batch, heads, out_length, d_v]
     """
     # TODO implement multi head attention.
-    # Use i.e. torch.transpose, torch.sqrt, torch.tril, torch.exp, torch.inf
-    # as well as torch.nn.functional.softmax .
+    # Hint: You will likely need torch.transpose, torch.sqrt, torch.tril,
+    # torch.inf, and torch.nn.functional.softmax.
+    # For applying the causal mask, you can either try using torch.exp or torch.masked_fill.
+
     attention_out = None
     return attention_out
 

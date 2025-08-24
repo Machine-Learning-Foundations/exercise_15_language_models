@@ -91,7 +91,7 @@ def convert(sequences: torch.Tensor, inv_vocab: dict) -> list:
     """Convert an array of character-integers to a list of letters.
 
     Args:
-        sequences (jnp.ndarray): An integer array, which represents characters.
+        sequences (torch.Tensor): An integer array, which represents characters.
         inv_vocab (dict): The dictonary with the integer to char mapping.
 
     Returns:
