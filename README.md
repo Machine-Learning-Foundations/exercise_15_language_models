@@ -11,7 +11,7 @@ To make attention useful in a language modelling scenario we cannot use future i
 Since our attention matrix is multiplied from the left we must mask out the upper triangle
 excluding the main diagonal for causality.
 
-Keep in mind that $\mathbf{Q} \in \mathbb{R}^{b,h,o,d_k}$, $\mathbf{Q} \in \mathbb{R}^{b,h,o,d_k}$ and $\mathbf{Q} \in \mathbb{R}^{b,h,o,d_v}$, with $b$ the batch size, $h$ the number of heads, $o$ the desired output dimension, $d_k$ the key dimension and finally $d_v$ as value dimension. Your code must rely on broadcasting to process the matrix operations correctly. The notation follows [1]. 
+Keep in mind that $\mathbf{Q} \in \mathbb{R}^{b,h,o,d_k}$, $\mathbf{K} \in \mathbb{R}^{b,h,o,d_k}$ and $\mathbf{V} \in \mathbb{R}^{b,h,o,d_v}$, with $b$ the batch size, $h$ the number of heads, $o$ the desired output dimension, $d_k$ the key dimension and finally $d_v$ as value dimension. Your code must rely on broadcasting to process the matrix operations correctly. The notation follows [1]. 
 
 Furthermore write a function to convert the network output of vector encodings back into a string by completing the `convert` function  in `src/util.py`.
 
