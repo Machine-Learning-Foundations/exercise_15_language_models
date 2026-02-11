@@ -98,5 +98,5 @@ def convert(sequences: torch.Tensor, inv_vocab: dict) -> list:
         list: A list of characters.
     """
     res = []
-    # TODO: Return a nested list of characters.
+    # 2. TODO: Return a nested list of characters.
     return res
