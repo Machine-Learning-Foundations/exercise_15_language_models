@@ -27,7 +27,7 @@ def dot_product_attention(
     Returns:
         torch.Tensor: The attention values of shape  [batch, heads, out_length, d_v]
     """
-    # TODO implement multi head attention.
+    # 1. TODO: implement multi head attention.
     # Hint: You will likely need torch.transpose, torch.sqrt, torch.tril,
     # torch.inf, and torch.nn.functional.softmax.
     # For applying the causal mask, you can either try using torch.exp or torch.masked_fill.
